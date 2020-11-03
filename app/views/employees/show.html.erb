@@ -1,0 +1,13 @@
+<h1><%= @employee.first_name + " " + @employee.last_name %></h1>
+
+<h3>Alias: <%= @employee.alias %></h3><b>
+<h3>Title: <%= @employee.title %></h3><b>
+<h3>Office: <%= @employee.office %></h3><b>
+
+<img src=<%= @employee.img_url %>>
+
+<h3>Dog: <%= link_to @employee.dog.name, dog_path(@employee.dog) %></h3><b>
+
+<%= button_to "Edit", edit_employee_path, method: :get %>
+<%= button_to "Back to employees", employees_path, method: :get %>
+<%= button_to "Fire employee", employee_path(@employee), method: :delete %>
